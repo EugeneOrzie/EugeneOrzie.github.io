@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Take A Leap</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-11-17T12:54:35.303Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>张俊</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5. Longest Palindromic Substring Part 2</title>
+    <link href="http://yoursite.com/2017/11/17/Leetcode-Solution-5-Longest-Palindromic-Substring-2/"/>
+    <id>http://yoursite.com/2017/11/17/Leetcode-Solution-5-Longest-Palindromic-Substring-2/</id>
+    <published>2017-11-17T12:15:01.000Z</published>
+    <updated>2017-11-17T12:54:35.303Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In the previous article &lt;a href=&quot;/2017/11/06/Leetcode-Solution-5-Longest-Palindromic-Substring/&quot;&gt;Longest Palindromic Substring&lt;/a&gt;, I hav
+    
+    </summary>
+    
+      <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
+    
+    
+      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
+    
+      <category term="Manacher’s Algorithm" scheme="http://yoursite.com/tags/Manacher%E2%80%99s-Algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Architecture-At-Midnight</title>
+    <link href="http://yoursite.com/2017/11/14/Architecture-At-Midnight/"/>
+    <id>http://yoursite.com/2017/11/14/Architecture-At-Midnight/</id>
+    <published>2017-11-13T16:41:00.000Z</published>
+    <updated>2017-11-13T17:43:15.596Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;How to build a perfect system? This question has been lingering in my mind these days. Though there are many paradigms, patterns and best
+    
+    </summary>
+    
+      <category term="Architecture" scheme="http://yoursite.com/categories/Architecture/"/>
+    
+    
+      <category term="Architecture" scheme="http://yoursite.com/tags/Architecture/"/>
+    
+      <category term="System Design" scheme="http://yoursite.com/tags/System-Design/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5. Longest Palindromic Substring</title>
+    <link href="http://yoursite.com/2017/11/06/Leetcode-Solution-5-Longest-Palindromic-Substring/"/>
+    <id>http://yoursite.com/2017/11/06/Leetcode-Solution-5-Longest-Palindromic-Substring/</id>
+    <published>2017-11-06T08:33:47.000Z</published>
+    <updated>2017-11-06T15:01:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Given a string s, find the longest palindromic substring in s，the maximum length of s is 1000.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Brute force&lt;/p&gt;
+&lt;p&gt; Search
+    
+    </summary>
+    
+      <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
+    
+    
+      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
+    
+      <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
+    
+      <category term="Dynamic Programing" scheme="http://yoursite.com/tags/Dynamic-Programing/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0. Leetcode Solution Preview</title>
+    <link href="http://yoursite.com/2017/11/06/Leetcode-Solution-Init/"/>
+    <id>http://yoursite.com/2017/11/06/Leetcode-Solution-Init/</id>
+    <published>2017-11-06T08:24:04.000Z</published>
+    <updated>2017-11-06T14:49:13.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In this topic, I will record the solution of leetcode problems. I have done a lot of online judgment problems, but I did not record the p
+    
+    </summary>
+    
+      <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
+    
+    
+      <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-11-06 Step Out of Comfortable Zone</title>
+    <link href="http://yoursite.com/2017/11/06/Thinking-Record-Break-Comfortable-Zone/"/>
+    <id>http://yoursite.com/2017/11/06/Thinking-Record-Break-Comfortable-Zone/</id>
+    <published>2017-11-06T03:57:20.000Z</published>
+    <updated>2017-11-21T03:58:37.338Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;舒适区指的是感觉非常轻松自在的那个抽象区域，比如做擅长的事，解决已知的问题，做这些事的时候都会很惬意自在，内心很有安全感。当做一件完全不熟悉的事或者解决完全未知的问题，我们的内心便开始不安，恐慌开始蔓延，这块区域称作恐慌区。在舒适区和恐慌区之间，还存在着第三种区域，叫做学习
+    
+    </summary>
+    
+      <category term="Thinking Record" scheme="http://yoursite.com/categories/Thinking-Record/"/>
+    
+    
+      <category term="Thinking Record" scheme="http://yoursite.com/tags/Thinking-Record/"/>
+    
+      <category term="Time Management" scheme="http://yoursite.com/tags/Time-Management/"/>
+    
+      <category term="Comfortable Zone" scheme="http://yoursite.com/tags/Comfortable-Zone/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-11-05 Trivial Thinking</title>
+    <link href="http://yoursite.com/2017/11/05/Thinking-Record/"/>
+    <id>http://yoursite.com/2017/11/05/Thinking-Record/</id>
+    <published>2017-11-05T12:55:08.000Z</published>
+    <updated>2017-11-06T09:18:53.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今年我尝试列了很多的计划，有宏观到练好英语、读一些有用的书这种抽象目标的，也有具体到一天要干这些那些事，每件事大约花费多少时间的。在宏观的计划上，我确实取得了一定的成就，但是在微观的计划上，却几乎失败的，往往都不能如期完成，计划如果制定得太紧，就无法完成规定任务，然后延期；
+    
+    </summary>
+    
+      <category term="Thinking Record" scheme="http://yoursite.com/categories/Thinking-Record/"/>
+    
+    
+      <category term="Thinking Record" scheme="http://yoursite.com/tags/Thinking-Record/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017 Review</title>
+    <link href="http://yoursite.com/2017/10/24/Review-Restart-In-2017/"/>
+    <id>http://yoursite.com/2017/10/24/Review-Restart-In-2017/</id>
+    <published>2017-10-24T08:24:04.000Z</published>
+    <updated>2017-11-06T12:45:20.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;隔了大半年多了，才又开始写博客，真的是拖延症患者。&lt;/p&gt;
+&lt;p&gt;先罗列一下今年干的事&lt;/p&gt;
+&lt;h2 id=&quot;减肥&quot;&gt;&lt;a href=&quot;#减肥&quot; class=&quot;headerlink&quot; title=&quot;减肥&quot;&gt;&lt;/a&gt;减肥&lt;/h2&gt;&lt;p&gt;从3月至7月底，从174瘦到了153。
+    
+    </summary>
+    
+      <category term="Review" scheme="http://yoursite.com/categories/Review/"/>
+    
+    
+      <category term="Review" scheme="http://yoursite.com/tags/Review/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Get Started</title>
+    <link href="http://yoursite.com/2017/01/20/Description-Hello-World/"/>
+    <id>http://yoursite.com/2017/01/20/Description-Hello-World/</id>
+    <published>2017-01-20T08:24:04.000Z</published>
+    <updated>2017-11-06T12:43:12.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是第一篇文章，主要描述一下这个博客的定位、目标和计划&lt;/p&gt;
+&lt;h2 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot; title=&quot;目标&quot;&gt;&lt;/a&gt;目标&lt;/h2&gt;&lt;p&gt;一个记录和分享个人所学所思所想的地方&lt;/p&gt;
+&lt;h3 id=&quot;记录&quot;&gt;
+    
+    </summary>
+    
+      <category term="Description" scheme="http://yoursite.com/categories/Description/"/>
+    
+    
+      <category term="Description" scheme="http://yoursite.com/tags/Description/"/>
+    
+  </entry>
+  
+</feed>
