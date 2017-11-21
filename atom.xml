@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-17T12:54:35.303Z</updated>
+  <updated>2017-11-21T06:13:26.875Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-11-21 无聊的鸡汤</title>
+    <link href="http://yoursite.com/2017/11/21/Thinking-Record-Ways-To-Do-Things/"/>
+    <id>http://yoursite.com/2017/11/21/Thinking-Record-Ways-To-Do-Things/</id>
+    <published>2017-11-21T03:57:20.000Z</published>
+    <updated>2017-11-21T06:13:26.875Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;鸡汤时间&quot;&gt;&lt;a href=&quot;#鸡汤时间&quot; class=&quot;headerlink&quot; title=&quot;鸡汤时间&quot;&gt;&lt;/a&gt;鸡汤时间&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;不要怕麻烦，出问题后不要想着靠躲能够躲得过去，因为逃避只会带来更大的问题。解决一个问题最佳的时间，就是现在。
+    
+    </summary>
+    
+      <category term="Thinking Record" scheme="http://yoursite.com/categories/Thinking-Record/"/>
+    
+    
+      <category term="Thinking Record" scheme="http://yoursite.com/tags/Thinking-Record/"/>
+    
+      <category term="Chicken Soup" scheme="http://yoursite.com/tags/Chicken-Soup/"/>
+    
+  </entry>
   
   <entry>
     <title>5. Longest Palindromic Substring Part 2</title>
@@ -78,9 +100,9 @@
       <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
     
     
-      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
-    
       <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
+    
+      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
     
       <category term="Dynamic Programing" scheme="http://yoursite.com/tags/Dynamic-Programing/"/>
     
