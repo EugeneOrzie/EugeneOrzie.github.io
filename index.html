@@ -263,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/22/Leetcode-Solution-6-7-8/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/25/Leetcode-Solution-10-44/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="张俊">
@@ -288,8 +288,178 @@
             
               
                 
-                <a class="post-title-link" href="/2017/11/22/Leetcode-Solution-6-7-8/" itemprop="url">
-                  6. 7. 8. Leetcode Solution
+                <a class="post-title-link" href="/2017/11/25/Leetcode-Solution-10-44/" itemprop="url">
+                  10. 44. Regular Expression
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-25T21:31:53+08:00">
+                2017-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode-Solution/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode Solution</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="10-Regular-Expression-Matching"><a href="#10-Regular-Expression-Matching" class="headerlink" title="10. Regular Expression Matching"></a>10. Regular Expression Matching</h2><p>This problem took me a long time to figure out because I went on a wrong way at first. I tried to solve it in linear time and I failed as a result, because I couldn’t determine <strong>“.*”</strong> matched which part of target string in order to have them matched. </p>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><p>Here is my solution utilizing Dynamic Programming.</p>
+<ol>
+<li><p>Calculate the length of s and p with a for-loop, which is usually unnecessary in other language such as Java. when (p == “”), return false if (s != “”) and return true if (s == “”).</p>
+</li>
+<li><p>Find all the <strong><em>blocks</em></strong>. The definition of blocks is better described in C language as below:</p>
+<pre><code>struct block{
+    char ch;
+    bool limited;
+};
+</code></pre><p> b* is a block, in which block.ch = ‘b’ and block.limited = false.</p>
+<p> a is a block, in which block.ch = ‘a’ and block.limited = true.</p>
+<p> .* is a block, in which block.ch = ‘.’ and block.limited = false.</p>
+<p> This struct is designed to express the pattern and will be used in the next step.</p>
+</li>
+<li><p>Suppose that f[i][j] means whether the first (i - 1)’s blocks can match the first (j-1)’s target string; f[blockLength + 1][targetStrLength + 1] is the answer.</p>
+<pre><code>f[0][0] = true
+f[i][0] = true if the first (i-1)&apos;s block.limited == false (i &gt; 0)
+f[i][j] = f[i - 1][j - 1] if (blocks[i].limited == false &amp;&amp; blocks[i].ch == targetStr[j]) (i &gt; 0, j &gt; 0)
+f[i][j] |= f[i - 1][k] if (blocks[i] matches targetStr[k+1, j]) (j &gt;= k &gt;= 0)
+</code></pre><p> annotation:</p>
+<pre><code>blocks means the array of block.
+targetStr means the string we are going to match. targetStr[i] means the i&apos;s char. targetStr[i, j] means substring in targetStr from i to j.
+| means or.
+</code></pre></li>
+</ol>
+<h3 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h3><p>Time complexity is O(n^3). Space complexity is O(n^2).</p>
+<h2 id="44-Wildcard-Matching"><a href="#44-Wildcard-Matching" class="headerlink" title="44. Wildcard Matching"></a>44. Wildcard Matching</h2><p>We could reuse the solution of problem <strong><em>10. Regular Expression Matching</em></strong> to solve this problem. But after I submited my code, I found that it cost 79ms which only beated 4.88 % of other c submissions. I realized there existed a better solution immediately.</p>
+<p>But my runtime was 9ms in previous question and beated 77.63% other c submissions. What’s difference between these two questions?</p>
+<p>It is not enough when the result is <font color="green">Accepted</font>. A better way to do the practice is to analyse it seriously and figure it out through alternative approachs in one problem other than many problems. I will work out this question in a better way in the next few days.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/22/Leetcode-Solution-6-7-8-9/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="张俊">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Take A Leap">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Take A Leap" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/11/22/Leetcode-Solution-6-7-8-9/" itemprop="url">
+                  6. 7. 8. 9. Leetcode Solution
                 </a>
               
             
@@ -369,6 +539,7 @@
 <p>The most important thing is to figure out the difference (which equals to  (2 * rows - 2)). Then loop from row 0 to row row_number - 1 and print the char.</p>
 <h2 id="7-Reverse-Integer"><a href="#7-Reverse-Integer" class="headerlink" title="7. Reverse Integer"></a>7. Reverse Integer</h2><p>This is a easy problem, so I don’t have much to say. Just be careful about the special case.</p>
 <h2 id="8-String-to-Integer-atoi"><a href="#8-String-to-Integer-atoi" class="headerlink" title="8. String to Integer (atoi)"></a>8. String to Integer (atoi)</h2><p>It is interesting to implement c function <strong>atoi</strong>. In order to implement a function, it is important to determine the requirements. </p>
+<h2 id="9-Palindrome-Number"><a href="#9-Palindrome-Number" class="headerlink" title="9. Palindrome Number"></a>9. Palindrome Number</h2><p>This question is a easy one. It could reuse the function of problem 7.</p>
 
           
         
@@ -1602,156 +1773,13 @@ abcdefgh =&gt; #a#b#c#d#e#f#g#h#
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/20/Description-Hello-World/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="张俊">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/uploads/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Take A Leap">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Take A Leap" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/20/Description-Hello-World/" itemprop="url">
-                  Get Started
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T16:24:04+08:00">
-                2017-01-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Description/" itemprop="url" rel="index">
-                    <span itemprop="name">Description</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>这是第一篇文章，主要描述一下这个博客的定位、目标和计划</p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>一个记录和分享个人所学所思所想的地方</p>
-<h3 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h3><p>这个博客的初衷，是构建一个专属于我的地方可以抒发感想和总结经验，记忆是多么不可靠的东西，很多过去的所思所想都很有记录和总结的价值，为了不让自己浪费这些有价值的东西，所以很有必要做记录。</p>
-<h3 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h3><p>记录的话写日记就行，写博客的目的之一就是可以让所有人都能够看到，所以分享也是目的之一。在新的时代中，如何传播自己的价值是一件非常重要的事，所以要尝试利用互联网这个工具。</p>
-<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h3 id="原创"><a href="#原创" class="headerlink" title="原创"></a>原创</h3><p>所有的文章都是原创，文中不可避免的可能会包含一些引用</p>
-<h3 id="质量"><a href="#质量" class="headerlink" title="质量"></a>质量</h3><p>有质量的文章才具备分享的价值，既然是在互联网上，不能随便什么都放上来，需要保证质量。具体来说，技术性文章需要亲测可用，工作生活经验需要有明确的结论和可靠的论据。</p>
-<h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><p>短期计划坚持一年，更新频率为一个月一次，从2017年2月开始，预计2017年至少11篇，类别不限</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
           
           </div>
@@ -1792,7 +1820,7 @@ abcdefgh =&gt; #a#b#c#d#e#f#g#h#
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1810,7 +1838,7 @@ abcdefgh =&gt; #a#b#c#d#e#f#g#h#
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

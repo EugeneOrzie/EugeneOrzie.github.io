@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-22T10:04:59.719Z</updated>
+  <updated>2017-11-25T14:31:46.116Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>6. 7. 8. Leetcode Solution</title>
-    <link href="http://yoursite.com/2017/11/22/Leetcode-Solution-6-7-8/"/>
-    <id>http://yoursite.com/2017/11/22/Leetcode-Solution-6-7-8/</id>
+    <title>10. 44. Regular Expression</title>
+    <link href="http://yoursite.com/2017/11/25/Leetcode-Solution-10-44/"/>
+    <id>http://yoursite.com/2017/11/25/Leetcode-Solution-10-44/</id>
+    <published>2017-11-25T13:31:53.000Z</published>
+    <updated>2017-11-25T14:31:46.116Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;10-Regular-Expression-Matching&quot;&gt;&lt;a href=&quot;#10-Regular-Expression-Matching&quot; class=&quot;headerlink&quot; title=&quot;10. Regular Expression Matching&quot;
+    
+    </summary>
+    
+      <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
+    
+    
+      <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
+    
+      <category term="Regular Expression" scheme="http://yoursite.com/tags/Regular-Expression/"/>
+    
+      <category term="Dynamic Programming" scheme="http://yoursite.com/tags/Dynamic-Programming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6. 7. 8. 9. Leetcode Solution</title>
+    <link href="http://yoursite.com/2017/11/22/Leetcode-Solution-6-7-8-9/"/>
+    <id>http://yoursite.com/2017/11/22/Leetcode-Solution-6-7-8-9/</id>
     <published>2017-11-22T09:45:26.000Z</published>
-    <updated>2017-11-22T10:04:59.719Z</updated>
+    <updated>2017-11-25T13:29:58.406Z</updated>
     
     <summary type="html">
     
@@ -30,6 +54,8 @@
     
       <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
     
+    
+      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
     
       <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
     
@@ -121,9 +147,9 @@
       <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
     
     
-      <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
-    
       <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
+    
+      <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
     
       <category term="Dynamic Programing" scheme="http://yoursite.com/tags/Dynamic-Programing/"/>
     
