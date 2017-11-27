@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-25T14:31:46.116Z</updated>
+  <updated>2017-11-27T18:59:41.377Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017-11-28 Introspection-Episode-1</title>
+    <link href="http://yoursite.com/2017/11/28/Introspection-Episode-1/"/>
+    <id>http://yoursite.com/2017/11/28/Introspection-Episode-1/</id>
+    <published>2017-11-27T18:48:46.000Z</published>
+    <updated>2017-11-27T18:59:41.377Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;再一次卸载了王者农药，好气啊，赢赢输输，怎么都上不了星耀。这次真的卸载了（上次说这话是两周前吧）。&lt;/li&gt;
+&lt;li&gt;心态容易爆炸，不管是游戏中还是游戏后。游戏中争强好胜，赢了想再来，输了不服气。游戏后精疲力尽，啥事都不想做，但是一堆的deadline摆在眼前，
+    
+    </summary>
+    
+      <category term="Introspection" scheme="http://yoursite.com/categories/Introspection/"/>
+    
+    
+      <category term="-Introspection" scheme="http://yoursite.com/tags/Introspection/"/>
+    
+  </entry>
   
   <entry>
     <title>10. 44. Regular Expression</title>
