@@ -95,7 +95,7 @@ If the length of a string is n (suppose n &amp;gt;= 10), then it has n-9 kinds o
 <meta property="og:description" content="This is a great problem which covers much useful and frequent knowledge. 
 If the length of a string is n (suppose n &amp;gt;= 10), then it has n-9 kinds of 10-letter-long substrings. The problem is asking">
 <meta property="og:image" content="http://yoursite.com/images/20171210_Hash_Table.jpg">
-<meta property="og:updated_time" content="2017-12-10T12:52:39.451Z">
+<meta property="og:updated_time" content="2017-12-10T12:56:10.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="187. Repeated DNA Sequences">
 <meta name="twitter:description" content="This is a great problem which covers much useful and frequent knowledge. 
@@ -371,14 +371,14 @@ If the length of a string is n (suppose n &amp;gt;= 10), then it has n-9 kinds o
 <p> Compare all the substrings directly. Totally we need to do comparison (n-9)<sup>2</sup> times, or, to be more accurate, (n-8)*(n-9)/2 times. </p>
 </li>
 <li><p>Hash Table</p>
-<p> Construct a Hash Table, and use it do comparison. If we deal with hash conflict properly, the time complexity should be approximately O(n). </p>
+<p> Construct a Hash Table, and use it to do comparison. If we deal with hash conflict properly, the time complexity should be approximately O(n). </p>
 <p> <img src="/images/20171210_Hash_Table.jpg" alt="Hash Table"></p>
 <blockquote>
 <p>This image is from the Internet. If I have infringed your copyright, please contact me by email: zjisintheway@gmail.com</p>
 </blockquote>
 <p> In my solution, I wrote a raw <strong>Hash Table</strong> implementation using C programming language. It enhances my understanding of memory management and improves my recognization about the differences between different programming languages. With other high-level programming, such as <strong>Java</strong>, <strong>Golang</strong>, <strong>php</strong>, <strong>python</strong>, I just need to use the stdlib and solve this problem quickly without concerning about the allocated memory. </p>
 <blockquote>
-<p>Be careful: when initializing the Hash Table, each pointer of entry in the Hash Table is not always pointing to NULL(It could be anything), you should make an explicitly asignment.</p>
+<p>Be careful: when initializing the Hash Table, each pointer of entry in the Hash Table is not always pointing to NULL(It could be anything), you should make an explicitly assignment.</p>
 </blockquote>
 <p> But do we need to know the details? This is a controversial problem. I do think we need to know some details and some implementations of the stdlib because this is the difference between mediocre engineers and outstanding ones. That’s why I use C as my programming language when solving problems in Leetcode.</p>
 </li>
