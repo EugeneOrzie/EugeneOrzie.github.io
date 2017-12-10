@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-27T18:59:41.377Z</updated>
+  <updated>2017-12-10T12:52:39.451Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>187. Repeated DNA Sequences</title>
+    <link href="http://yoursite.com/2017/12/10/Leetcode-Solution-187-Repeated-DNA-Sequences/"/>
+    <id>http://yoursite.com/2017/12/10/Leetcode-Solution-187-Repeated-DNA-Sequences/</id>
+    <published>2017-12-10T11:42:32.000Z</published>
+    <updated>2017-12-10T12:52:39.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This is a great problem which covers much useful and frequent knowledge. &lt;/p&gt;
+&lt;p&gt;If the length of a string is &lt;strong&gt;n&lt;/strong&gt; (suppose
+    
+    </summary>
+    
+      <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
+    
+    
+      <category term="Hash Table" scheme="http://yoursite.com/tags/Hash-Table/"/>
+    
+      <category term="Bit Manipulation" scheme="http://yoursite.com/tags/Bit-Manipulation/"/>
+    
+  </entry>
   
   <entry>
     <title>2017-11-28 Introspection-Episode-1</title>
@@ -42,7 +65,7 @@
     <link href="http://yoursite.com/2017/11/25/Leetcode-Solution-10-44/"/>
     <id>http://yoursite.com/2017/11/25/Leetcode-Solution-10-44/</id>
     <published>2017-11-25T13:31:53.000Z</published>
-    <updated>2017-12-07T08:58:05.515Z</updated>
+    <updated>2017-12-07T09:04:30.383Z</updated>
     
     <summary type="html">
     
@@ -58,6 +81,8 @@
       <category term="Regular Expression" scheme="http://yoursite.com/tags/Regular-Expression/"/>
     
       <category term="Dynamic Programming" scheme="http://yoursite.com/tags/Dynamic-Programming/"/>
+    
+      <category term="Greedy Algorithm" scheme="http://yoursite.com/tags/Greedy-Algorithm/"/>
     
   </entry>
   
@@ -77,9 +102,9 @@
       <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
     
     
-      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
-    
       <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
+    
+      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
     
   </entry>
   
@@ -169,9 +194,9 @@
       <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
     
     
-      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
-    
       <category term="Leetcode" scheme="http://yoursite.com/tags/Leetcode/"/>
+    
+      <category term="String Process" scheme="http://yoursite.com/tags/String-Process/"/>
     
       <category term="Dynamic Programing" scheme="http://yoursite.com/tags/Dynamic-Programing/"/>
     

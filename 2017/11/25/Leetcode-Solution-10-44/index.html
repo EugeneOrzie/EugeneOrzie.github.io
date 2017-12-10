@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Leetcode,Regular Expression,Dynamic Programming," />
+  <meta name="keywords" content="Leetcode,Regular Expression,Dynamic Programming,Greedy Algorithm," />
 
 
 
@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/25/Leetcode-Solution-10-44/index.html">
 <meta property="og:site_name" content="Take A Leap">
 <meta property="og:description" content="10. Regular Expression MatchingThis problem took me a long time to figure out because I went on a wrong way at first. I tried to solve it in linear time and I failed as a result, because I couldn’t de">
-<meta property="og:updated_time" content="2017-12-07T08:58:05.515Z">
+<meta property="og:updated_time" content="2017-12-07T09:04:30.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="10. 44. Regular Expression">
 <meta name="twitter:description" content="10. Regular Expression MatchingThis problem took me a long time to figure out because I went on a wrong way at first. I tried to solve it in linear time and I failed as a result, because I couldn’t de">
@@ -393,7 +393,7 @@ targetStr means the string we are going to match. targetStr[i] means the i&apos;
 <p>2017-12-07 supplement</p>
 <p>I read some solutions from leetcode and found all of the fast solutions shared the same idea. I followed this idea and got 25ms as a result. </p>
 <p>This new solution has, at best, linear runtime O(m+n) and at worst, O(mn), which also has constant space complexity and short code. </p>
-<p>The basic idea of the solution is to have two pointers(<strong>p</strong> and <strong>s</strong>) to record the positions of target string and pattern string correspondingly. Then we could compare the chars pointed and let the two pointers advance by regulation. If the two chars are not match, then backtrack both to previous recorded positions <strong>star</strong> and <strong>ss</strong>. Concrete code is listed:</p>
+<p>The basic idea of the solution is to have two pointers(<strong>p</strong> and <strong>s</strong>) to record the positions of target string and pattern string correspondingly. Then we could compare the chars pointed and let the two pointers advance by regulation. If the two chars are not match, then backtrack both pointers to previous recorded positions <strong>star</strong> and <strong>ss</strong>. Concrete code is listed:</p>
 <pre><code>if ((*p==&apos;?&apos;)||(*p==*s)){s++;p++;continue;} 
 
 if (*p==&apos;*&apos;){star=p++; ss=s;continue;} 
@@ -461,6 +461,8 @@ if (star){ p = star+1; s=++ss;continue;}
             <a href="/tags/Regular-Expression/" rel="tag"># Regular Expression</a>
           
             <a href="/tags/Dynamic-Programming/" rel="tag"># Dynamic Programming</a>
+          
+            <a href="/tags/Greedy-Algorithm/" rel="tag"># Greedy Algorithm</a>
           
         </div>
       
@@ -551,7 +553,7 @@ if (star){ p = star+1; s=++ss;continue;}
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -569,7 +571,7 @@ if (star){ p = star+1; s=++ss;continue;}
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
