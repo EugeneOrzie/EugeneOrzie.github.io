@@ -95,7 +95,7 @@ Introduction">
 <meta property="og:description" content="In my opinion, 208. Implement Trie(Prefix Tree) and 211. Add and Search Word Data structure design share the same idea: 208 is the direct implementment and 211 is the application of Trie.
 Introduction">
 <meta property="og:image" content="http://yoursite.com/images/20171216_Trie_example.png">
-<meta property="og:updated_time" content="2017-12-16T10:28:46.169Z">
+<meta property="og:updated_time" content="2017-12-16T10:32:06.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="208. 211. Trie(Prefix Tree)">
 <meta name="twitter:description" content="In my opinion, 208. Implement Trie(Prefix Tree) and 211. Add and Search Word Data structure design share the same idea: 208 is the direct implementment and 211 is the application of Trie.
@@ -412,7 +412,7 @@ Introduction">
     char character;
     struct trieNode** childs;
 }
-</code></pre><p>The Insertion and Search operation can be refered from <a href="https://github.com/EugeneOrzie/leetcode/blob/master/201-250/208_Implement_Trie_\(Prefix_Tree\" target="_blank" rel="external">here</a>.c).</p>
+</code></pre><p>The Insertion and Search operation can be refered from <a href="https://github.com/EugeneOrzie/leetcode/blob/master/201-250/208_Implement_Trie_(Prefix_Tree).c" target="_blank" rel="external">here</a>.</p>
 <p>Obviously, this structure is simple and useful to implement a trie, but it wastes space storing NULL pointers. The array of struct trieNode*, <strong>childs</strong>, may initial n(depends on the target we need to represent) pointers pointing NULL. If the tree is sparse, then there are many NULL pointers.</p>
 <p>One way to reduce the space waste is called <em>alphabet reduction</em>. In essence, it reduces the storage cost of one node, but makes the path longer.</p>
 

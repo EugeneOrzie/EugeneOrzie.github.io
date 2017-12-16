@@ -413,7 +413,7 @@
     char character;
     struct trieNode** childs;
 }
-</code></pre><p>The Insertion and Search operation can be refered from <a href="https://github.com/EugeneOrzie/leetcode/blob/master/201-250/208_Implement_Trie_\(Prefix_Tree\" target="_blank" rel="external">here</a>.c).</p>
+</code></pre><p>The Insertion and Search operation can be refered from <a href="https://github.com/EugeneOrzie/leetcode/blob/master/201-250/208_Implement_Trie_(Prefix_Tree).c" target="_blank" rel="external">here</a>.</p>
 <p>Obviously, this structure is simple and useful to implement a trie, but it wastes space storing NULL pointers. The array of struct trieNode*, <strong>childs</strong>, may initial n(depends on the target we need to represent) pointers pointing NULL. If the tree is sparse, then there are many NULL pointers.</p>
 <p>One way to reduce the space waste is called <em>alphabet reduction</em>. In essence, it reduces the storage cost of one node, but makes the path longer.</p>
 
