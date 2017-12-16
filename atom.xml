@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-10T12:56:10.269Z</updated>
+  <updated>2017-12-16T10:22:13.298Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>208. 211. Trie(Prefix Tree)</title>
+    <link href="http://yoursite.com/2017/12/16/Leetcode-Solution-208-211-Trie-Prefix-Tree/"/>
+    <id>http://yoursite.com/2017/12/16/Leetcode-Solution-208-211-Trie-Prefix-Tree/</id>
+    <published>2017-12-16T06:49:00.000Z</published>
+    <updated>2017-12-16T10:22:13.298Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In my opinion, &lt;a href=&quot;https://leetcode.com/problems/implement-trie-prefix-tree/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;208. Implement 
+    
+    </summary>
+    
+      <category term="Leetcode Solution" scheme="http://yoursite.com/categories/Leetcode-Solution/"/>
+    
+    
+      <category term="Trie" scheme="http://yoursite.com/tags/Trie/"/>
+    
+      <category term="Prefix Tree" scheme="http://yoursite.com/tags/Prefix-Tree/"/>
+    
+      <category term="Structure Design" scheme="http://yoursite.com/tags/Structure-Design/"/>
+    
+  </entry>
   
   <entry>
     <title>187. Repeated DNA Sequences</title>

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Description," />
+  <meta name="keywords" content="Trie,Prefix Tree,Structure Design," />
 
 
 
@@ -86,25 +86,21 @@
 
 
 
-<meta name="description" content="这是第一篇文章，主要描述一下这个博客的定位、目标和计划
-目标一个记录和分享个人所学所思所想的地方
-记录这个博客的初衷，是构建一个专属于我的地方可以抒发感想和总结经验，记忆是多么不可靠的东西，很多过去的所思所想都很有记录和总结的价值，为了不让自己浪费这些有价值的东西，所以很有必要做记录。
-分享记录的话写日记就行，写博客的目的之一就是可以让所有人都能够看到，所以分享也是目的之一。在新的时代中，如何传播">
+<meta name="description" content="In my opinion, 208. Implement Trie(Prefix Tree) and 211. Add and Search Word Data structure design share the same idea: 208 is the direct implementment and 211 is the application of Trie.
+Introduction">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Get Started">
-<meta property="og:url" content="http://yoursite.com/2017/01/20/Description-Hello-World/index.html">
+<meta property="og:title" content="208. 211. Trie(Prefix Tree)">
+<meta property="og:url" content="http://yoursite.com/2017/12/16/Leetcode-Solution-208-211-Trie-Prefix-Tree/index.html">
 <meta property="og:site_name" content="Take A Leap">
-<meta property="og:description" content="这是第一篇文章，主要描述一下这个博客的定位、目标和计划
-目标一个记录和分享个人所学所思所想的地方
-记录这个博客的初衷，是构建一个专属于我的地方可以抒发感想和总结经验，记忆是多么不可靠的东西，很多过去的所思所想都很有记录和总结的价值，为了不让自己浪费这些有价值的东西，所以很有必要做记录。
-分享记录的话写日记就行，写博客的目的之一就是可以让所有人都能够看到，所以分享也是目的之一。在新的时代中，如何传播">
-<meta property="og:updated_time" content="2017-11-06T12:43:12.000Z">
+<meta property="og:description" content="In my opinion, 208. Implement Trie(Prefix Tree) and 211. Add and Search Word Data structure design share the same idea: 208 is the direct implementment and 211 is the application of Trie.
+Introduction">
+<meta property="og:image" content="http://yoursite.com/images/20171216_Trie_example.png">
+<meta property="og:updated_time" content="2017-12-16T10:22:13.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Get Started">
-<meta name="twitter:description" content="这是第一篇文章，主要描述一下这个博客的定位、目标和计划
-目标一个记录和分享个人所学所思所想的地方
-记录这个博客的初衷，是构建一个专属于我的地方可以抒发感想和总结经验，记忆是多么不可靠的东西，很多过去的所思所想都很有记录和总结的价值，为了不让自己浪费这些有价值的东西，所以很有必要做记录。
-分享记录的话写日记就行，写博客的目的之一就是可以让所有人都能够看到，所以分享也是目的之一。在新的时代中，如何传播">
+<meta name="twitter:title" content="208. 211. Trie(Prefix Tree)">
+<meta name="twitter:description" content="In my opinion, 208. Implement Trie(Prefix Tree) and 211. Add and Search Word Data structure design share the same idea: 208 is the direct implementment and 211 is the application of Trie.
+Introduction">
+<meta name="twitter:image" content="http://yoursite.com/images/20171216_Trie_example.png">
 
 
 
@@ -132,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/20/Description-Hello-World/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/16/Leetcode-Solution-208-211-Trie-Prefix-Tree/"/>
 
 
 
 
 
-  <title> Get Started | Take A Leap </title>
+  <title> 208. 211. Trie(Prefix Tree) | Take A Leap </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -271,7 +267,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/20/Description-Hello-World/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/16/Leetcode-Solution-208-211-Trie-Prefix-Tree/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="张俊">
@@ -295,7 +291,7 @@
             
             
               
-                Get Started
+                208. 211. Trie(Prefix Tree)
               
             
           </h1>
@@ -310,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T16:24:04+08:00">
-                2017-01-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-16T14:49:00+08:00">
+                2017-12-16
               </time>
             
 
@@ -333,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Description/" itemprop="url" rel="index">
-                    <span itemprop="name">Description</span>
+                  <a href="/categories/Leetcode-Solution/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode Solution</span>
                   </a>
                 </span>
 
@@ -368,13 +364,57 @@
       
 
       
-        <p>这是第一篇文章，主要描述一下这个博客的定位、目标和计划</p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>一个记录和分享个人所学所思所想的地方</p>
-<h3 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h3><p>这个博客的初衷，是构建一个专属于我的地方可以抒发感想和总结经验，记忆是多么不可靠的东西，很多过去的所思所想都很有记录和总结的价值，为了不让自己浪费这些有价值的东西，所以很有必要做记录。</p>
-<h3 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h3><p>记录的话写日记就行，写博客的目的之一就是可以让所有人都能够看到，所以分享也是目的之一。在新的时代中，如何传播自己的价值是一件非常重要的事，所以要尝试利用互联网这个工具。</p>
-<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h3 id="原创"><a href="#原创" class="headerlink" title="原创"></a>原创</h3><p>所有的文章都是原创，文中不可避免的可能会包含一些引用</p>
-<h3 id="质量"><a href="#质量" class="headerlink" title="质量"></a>质量</h3><p>有质量的文章才具备分享的价值，既然是在互联网上，不能随便什么都放上来，需要保证质量。具体来说，技术性文章需要亲测可用，工作生活经验需要有明确的结论和可靠的论据。</p>
-<h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><p>短期计划坚持一年，更新频率为一个月一次，从2017年2月开始，预计2017年至少11篇，类别不限</p>
+        <p>In my opinion, <a href="https://leetcode.com/problems/implement-trie-prefix-tree/" target="_blank" rel="external"><strong>208. Implement Trie(Prefix Tree)</strong></a> and <a href="https://leetcode.com/problems/add-and-search-word-data-structure-design/description/" target="_blank" rel="external"><strong>211. Add and Search Word Data structure design</strong></a> share the same idea: <strong>208</strong> is the direct implementment and <strong>211</strong> is the application of <strong>Trie</strong>.</p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Trie, also named as Prefix Tree, is a tree structure that is usually used to search for strings(or strings contains a specific prefix) very quickly. </p>
+<p>Basicly, The Trie is a tree and every node except root of this tree contains a char. Each node can represent a string which consists with chars contained by all nodes in the path from root sequentially. </p>
+<p><img src="/images/20171216_Trie_example.png" alt="Trie"></p>
+<h3 id="Scenerio"><a href="#Scenerio" class="headerlink" title="Scenerio"></a>Scenerio</h3><ol>
+<li>Find whether a word is in the dictionary.</li>
+<li>Find all the words start with a specific prefix.</li>
+<li>How many times does a word occur in a article.</li>
+</ol>
+<blockquote>
+<p>A Trie can provide an alphabetical ordering of the entries by key. – wikipedia</p>
+</blockquote>
+<h3 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">Operation</th>
+<th style="text-align:center">Time Complexity</th>
+<th style="text-align:center">Space Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Insert</td>
+<td style="text-align:center">O(h)</td>
+<td style="text-align:center">O(h)</td>
+</tr>
+<tr>
+<td style="text-align:center">Search</td>
+<td style="text-align:center">O(h)</td>
+<td style="text-align:center">NULL</td>
+</tr>
+<tr>
+<td style="text-align:center">Delete</td>
+<td style="text-align:center">O(h)</td>
+<td style="text-align:center">O(h)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>h is the length of word.</p>
+</blockquote>
+<h3 id="Limitation"><a href="#Limitation" class="headerlink" title="Limitation"></a>Limitation</h3><p>As we can see, the performance of Trie is related to the length of a string. If the average length of strings is too long (such as 1k, 1m or even more) and they have a low occurrence rate, we will build a sparse tree. Under this situation we have a bad performance. </p>
+<p>So, we usually call trie as <em>Dictionary Tree</em> in Chinese because all the words in the dictionary is short and similar(they share many nodes in Trie). It is fitting and proper to store the words of a dictionary by using Trie.</p>
+<h3 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h3><pre><code>struct trieNode{
+    int occurTimes;
+    char character;
+    struct trieNode** childs;
+}
+</code></pre><p>The Insertion and Search operation can be refered from <a href="https://github.com/EugeneOrzie/leetcode/blob/master/201-250/208_Implement_Trie_(Prefix_Tree" target="_blank" rel="external">here</a>.c).</p>
+<p>Obviously, this structure is simple and useful to implement a trie, but it wastes space storing NULL pointers. The array of struct trieNode<em>, <em>*childs</em></em>, may initial n(depends on the target we need to represent) pointers pointing NULL. If the tree is sparse, then there are many NULL pointers.</p>
+<p>One way to reduce the space waste is called <em>alphabet reduction</em>. In essence, it reduces the storage cost of one node, but makes the path longer.</p>
 
       
     </div>
@@ -419,7 +459,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Description/" rel="tag"># Description</a>
+            <a href="/tags/Trie/" rel="tag"># Trie</a>
+          
+            <a href="/tags/Prefix-Tree/" rel="tag"># Prefix Tree</a>
+          
+            <a href="/tags/Structure-Design/" rel="tag"># Structure Design</a>
           
         </div>
       
@@ -428,15 +472,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/12/10/Leetcode-Solution-187-Repeated-DNA-Sequences/" rel="next" title="187. Repeated DNA Sequences">
+                <i class="fa fa-chevron-left"></i> 187. Repeated DNA Sequences
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/24/Review-Restart-In-2017/" rel="prev" title="2017 Review">
-                2017 Review <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -609,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目标"><span class="nav-number">1.</span> <span class="nav-text">目标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#记录"><span class="nav-number">1.1.</span> <span class="nav-text">记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分享"><span class="nav-number">1.2.</span> <span class="nav-text">分享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位"><span class="nav-number">2.</span> <span class="nav-text">定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原创"><span class="nav-number">2.1.</span> <span class="nav-text">原创</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#质量"><span class="nav-number">2.2.</span> <span class="nav-text">质量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计划"><span class="nav-number">3.</span> <span class="nav-text">计划</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scenerio"><span class="nav-number">2.</span> <span class="nav-text">Scenerio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Performance"><span class="nav-number">3.</span> <span class="nav-text">Performance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Limitation"><span class="nav-number">4.</span> <span class="nav-text">Limitation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation"><span class="nav-number">5.</span> <span class="nav-text">Implementation</span></a></li></ol></div>
             
 
           </div>
