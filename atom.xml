@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-16T10:32:06.592Z</updated>
+  <updated>2017-12-19T13:46:03.606Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Chatroom 1 design</title>
+    <link href="http://yoursite.com/2017/12/19/Chatroom-1/"/>
+    <id>http://yoursite.com/2017/12/19/Chatroom-1/</id>
+    <published>2017-12-19T08:21:09.000Z</published>
+    <updated>2017-12-19T13:46:03.606Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###Background&lt;br&gt;This is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus
+    
+    </summary>
+    
+      <category term="CMU Course Project" scheme="http://yoursite.com/categories/CMU-Course-Project/"/>
+    
+    
+      <category term="Project" scheme="http://yoursite.com/tags/Project/"/>
+    
+      <category term="Web Application" scheme="http://yoursite.com/tags/Web-Application/"/>
+    
+      <category term="Socket" scheme="http://yoursite.com/tags/Socket/"/>
+    
+  </entry>
   
   <entry>
     <title>208. 211. Trie(Prefix Tree)</title>
