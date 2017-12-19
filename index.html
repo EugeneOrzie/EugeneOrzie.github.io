@@ -365,8 +365,8 @@
       
         
           
-            <p>###Background<br>This is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus. It aims to build a web application using some specific technique including JavaScript, Node.js, express.js and so on.</p>
-<p>###Scenerio<br>Implement a simple web version of Chat Room, including functions:</p>
+            <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>This is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus. It aims to build a web application using some specific technique including JavaScript, Node.js, express.js and so on.</p>
+<h3 id="Scenerio"><a href="#Scenerio" class="headerlink" title="Scenerio"></a>Scenerio</h3><p>Implement a simple web version of Chat Room, including functions:</p>
 <ol>
 <li>Regist and Login.</li>
 <li>Post message in chat room.</li>
@@ -374,13 +374,12 @@
 <li>Leave the chat room.</li>
 <li>Reload history message when a user re-enters the chat room.</li>
 </ol>
-<p>###Architecture<br>After figuring out the scenerio, it is easy to figure out an initial system architecture diagram.</p>
+<h3 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h3><p>After figuring out the scenerio, it is easy to figure out an initial system architecture diagram.</p>
 <p><img src="/images/20171219_Chatroom_System_Design_1.png" alt="system_architecture_diagram_1"></p>
 <p>In the diagram, the users are divided into two pools: Online pool and Offline pool. The Webserver will build long connection with each online user and inform them with new messages posted by other users immediately. Corresponding, online users can post messages to the Webserver which will be seen by others.</p>
 <p>But which pool will a user belong to? </p>
-<p><img src="/images/20171219_Chatroom_System_Design_2.png" alt="system_architecture_diagram_1"></p>
-<p>###Extensibility</p>
-
+<p><img src="/images/20171219_Chatroom_System_Design_2.png" alt="system_architecture_diagram_2"></p>
+<h3 id="Extensibility"><a href="#Extensibility" class="headerlink" title="Extensibility"></a>Extensibility</h3>
           
         
       
