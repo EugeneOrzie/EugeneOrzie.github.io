@@ -289,7 +289,7 @@
               
                 
                 <a class="post-title-link" href="/2017/12/19/Chatroom-1/" itemprop="url">
-                  Chatroom 1 design
+                  Chat Room System Design
                 </a>
               
             
@@ -365,21 +365,68 @@
       
         
           
-            <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>This is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus. It aims to build a web application using some specific technique including JavaScript, Node.js, express.js and so on.</p>
+            <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>This is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus. It aims to build a web application using some specific techniques including JavaScript, Node.js, express.js and so on.</p>
 <h3 id="Scenerio"><a href="#Scenerio" class="headerlink" title="Scenerio"></a>Scenerio</h3><p>Implement a simple web version of Chat Room, including functions:</p>
 <ol>
 <li>Regist and Login.</li>
-<li>Post message in chat room.</li>
+<li>Post messages in chat room.</li>
 <li>See other users’ chat messages.</li>
 <li>Leave the chat room.</li>
-<li>Reload history message when a user re-enters the chat room.</li>
+<li>Reload history messages when a user re-enters the chat room.</li>
 </ol>
 <h3 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h3><p>After figuring out the scenerio, it is easy to figure out an initial system architecture diagram.</p>
 <p><img src="/images/20171219_Chatroom_System_Design_1.png" alt="system_architecture_diagram_1"></p>
-<p>In the diagram, the users are divided into two pools: Online pool and Offline pool. The Webserver will build long connection with each online user and inform them with new messages posted by other users immediately. Corresponding, online users can post messages to the Webserver which will be seen by others.</p>
+<p>In the diagram, the users are divided into two pools: Online pool and Offline pool. The Webserver will build long connection with each online user and inform them with new messages posted by other users immediately. Correspondingly, online users can post messages to the Webserver which will be seen by others.</p>
 <p>But which pool will a user belong to? </p>
 <p><img src="/images/20171219_Chatroom_System_Design_2.png" alt="system_architecture_diagram_2"></p>
-<h3 id="Extensibility"><a href="#Extensibility" class="headerlink" title="Extensibility"></a>Extensibility</h3>
+<p>An offline user will become an online user by <strong>signing in</strong> and will return to offline status by <strong>leaving</strong>. <strong>Leaving</strong> means turning off the browser or signing out. Once a new user have registered successful, this user will automaticly login and become an online user.</p>
+<h3 id="Technique"><a href="#Technique" class="headerlink" title="Technique"></a>Technique</h3><pre><code>Webserver: express.js
+Database: Mysql
+Frontend: Bootstrap
+Socket: socket.io
+</code></pre><h3 id="Extensibility"><a href="#Extensibility" class="headerlink" title="Extensibility"></a>Extensibility</h3><h4 id="Growth-of-Users"><a href="#Growth-of-Users" class="headerlink" title="Growth of Users"></a>Growth of Users</h4><p>If we have a good fortune, millions of users love and join our Online Chat Room, the rapid growth of users will make our server under pressure. </p>
+<p>Let’s say there are 1 million registered users and at most 30% of them (300,000) will be online concurrently. In average, at most 20% of online users (60,000) will post in one second.</p>
+<p>On this occation, many problems will occur:</p>
+<ol>
+<li>One webserver could not keep 300,000 connections and process such great amounts of queries. </li>
+<li>The Mysql server will have a high load and refuse most of queries.</li>
+<li>The messages will have a long time latency and even be able to be lost. </li>
+</ol>
+<h4 id="1-Connections"><a href="#1-Connections" class="headerlink" title="1. Connections"></a>1. Connections</h4><p>We need more servers to provide connections. Assume each server could establish 500 connections, then we will need 300000/500 = <strong>600</strong> servers. </p>
+<p>When we try to inform the users with new posts, we must know which users should be sent and where the connections are. So it is necessary to store the status  of connections like this: </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">User</th>
+<th style="text-align:center">Instance</th>
+<th style="text-align:center">UpdateTime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Sam</td>
+<td style="text-align:center">100.ChatRoom.bj</td>
+<td style="text-align:center">2017-12-20 13:26:00</td>
+</tr>
+<tr>
+<td style="text-align:center">Peter</td>
+<td style="text-align:center">200.ChatRoom.ca</td>
+<td style="text-align:center">2017-12-20 14:26:00</td>
+</tr>
+<tr>
+<td style="text-align:center">Maria</td>
+<td style="text-align:center">300.ChatRoom.pa</td>
+<td style="text-align:center">2017-12-20 16:30:00</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Instance is named by ${instanceId}.${product}.${idc} </p>
+</blockquote>
+<p>Now, we know who we should inform and where to find them as long as this table is constantly updating.</p>
+<h4 id="2-Storage"><a href="#2-Storage" class="headerlink" title="2. Storage"></a>2. Storage</h4><h4 id="3-Messages"><a href="#3-Messages" class="headerlink" title="3. Messages"></a>3. Messages</h4><h4 id="Multiple-Rooms"><a href="#Multiple-Rooms" class="headerlink" title="Multiple Rooms"></a>Multiple Rooms</h4><p>With the growth of users, they would have many other requirements. One of them will be Multiple Room, after all we can not have all of users intermixed in one room.</p>
+<p>Then, it is necessary to allow users to establish and enter different rooms as they wish.</p>
+
           
         
       
