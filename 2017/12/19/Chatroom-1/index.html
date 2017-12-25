@@ -94,7 +94,8 @@
 <meta property="og:description" content="BackgroundThis is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus. It aims to build a web application using some specific techniques in">
 <meta property="og:image" content="http://yoursite.com/images/20171219_Chatroom_System_Design_1.png">
 <meta property="og:image" content="http://yoursite.com/images/20171219_Chatroom_System_Design_2.png">
-<meta property="og:updated_time" content="2017-12-20T08:42:27.350Z">
+<meta property="og:image" content="http://yoursite.com/images/20171225_Chatroom_System_Design_3.png">
+<meta property="og:updated_time" content="2017-12-25T15:45:45.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chat Room System Design">
 <meta name="twitter:description" content="BackgroundThis is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus. It aims to build a web application using some specific techniques in">
@@ -362,8 +363,8 @@
       
 
       
-        <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>This is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus. It aims to build a web application using some specific techniques including JavaScript, Node.js, express.js and so on.</p>
-<h3 id="Scenerio"><a href="#Scenerio" class="headerlink" title="Scenerio"></a>Scenerio</h3><p>Implement a simple web version of Chat Room, including functions:</p>
+        <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>This is a course project of 18652-Foundation Of Software Engineering in Carnegie Mellon University Silicon Valley Campus. It aims to build a web application using some specific techniques including JavaScript, Node.js, express.js and so on.</p>
+<h2 id="Scenerio"><a href="#Scenerio" class="headerlink" title="Scenerio"></a>Scenerio</h2><p>Implement a simple web version of Chat Room, including functions:</p>
 <ol>
 <li>Regist and Login.</li>
 <li>Post messages in chat room.</li>
@@ -371,17 +372,19 @@
 <li>Leave the chat room.</li>
 <li>Reload history messages when a user re-enters the chat room.</li>
 </ol>
-<h3 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h3><p>After figuring out the scenerio, it is easy to figure out an initial system architecture diagram.</p>
+<h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><p>After figuring out the scenerio, it is easy to figure out an initial system architecture diagram.</p>
 <p><img src="/images/20171219_Chatroom_System_Design_1.png" alt="system_architecture_diagram_1"></p>
 <p>In the diagram, the users are divided into two pools: Online pool and Offline pool. The Webserver will build long connection with each online user and inform them with new messages posted by other users immediately. Correspondingly, online users can post messages to the Webserver which will be seen by others.</p>
 <p>But which pool will a user belong to? </p>
 <p><img src="/images/20171219_Chatroom_System_Design_2.png" alt="system_architecture_diagram_2"></p>
 <p>An offline user will become an online user by <strong>signing in</strong> and will return to offline status by <strong>leaving</strong>. <strong>Leaving</strong> means turning off the browser or signing out. Once a new user have registered successful, this user will automaticly login and become an online user.</p>
-<h3 id="Technique"><a href="#Technique" class="headerlink" title="Technique"></a>Technique</h3><pre><code>Webserver: express.js
+<h2 id="Flow-Chart"><a href="#Flow-Chart" class="headerlink" title="Flow Chart"></a>Flow Chart</h2><h3 id="Login"><a href="#Login" class="headerlink" title="Login"></a>Login</h3><p><img src="/images/20171225_Chatroom_System_Design_3.png" alt="system_architecture_diagram_3"></p>
+<h3 id="Regist"><a href="#Regist" class="headerlink" title="Regist"></a>Regist</h3><h3 id="Post"><a href="#Post" class="headerlink" title="Post"></a>Post</h3><h3 id="Logout"><a href="#Logout" class="headerlink" title="Logout"></a>Logout</h3><h2 id="Technique"><a href="#Technique" class="headerlink" title="Technique"></a>Technique</h2><pre><code>Webserver: express.js
 Database: Mysql
 Frontend: Bootstrap
 Socket: socket.io
-</code></pre><h3 id="Extensibility"><a href="#Extensibility" class="headerlink" title="Extensibility"></a>Extensibility</h3><h4 id="Growth-of-Users"><a href="#Growth-of-Users" class="headerlink" title="Growth of Users"></a>Growth of Users</h4><p>If we have a good fortune, millions of users love and join our Online Chat Room, the rapid growth of users will make our server under pressure. </p>
+</code></pre><p>There may exist plenty of choices. But in this case, we use these lightweight tools to implement it to meet the requirements of course.</p>
+<h2 id="Extensibility"><a href="#Extensibility" class="headerlink" title="Extensibility"></a>Extensibility</h2><h3 id="Growth-of-Users"><a href="#Growth-of-Users" class="headerlink" title="Growth of Users"></a>Growth of Users</h3><p>If we have a good fortune, millions of users love and join our Online Chat Room, the rapid growth of users will make our server under pressure. </p>
 <p>Let’s say there are 1 million registered users and at most 30% of them (300,000) will be online concurrently. In average, at most 20% of online users (60,000) will post in one second.</p>
 <p>On this occation, many problems will occur:</p>
 <ol>
@@ -421,7 +424,8 @@ Socket: socket.io
 <p>Instance is named by ${instanceId}.${product}.${idc} </p>
 </blockquote>
 <p>Now, we know who we should inform and where to find them as long as this table is constantly updating.</p>
-<h4 id="2-Storage"><a href="#2-Storage" class="headerlink" title="2. Storage"></a>2. Storage</h4><h4 id="3-Messages"><a href="#3-Messages" class="headerlink" title="3. Messages"></a>3. Messages</h4><h4 id="Multiple-Rooms"><a href="#Multiple-Rooms" class="headerlink" title="Multiple Rooms"></a>Multiple Rooms</h4><p>With the growth of users, they would have many other requirements. One of them will be Multiple Room, after all we can not have all of users intermixed in one room.</p>
+<h4 id="2-Storage"><a href="#2-Storage" class="headerlink" title="2. Storage"></a>2. Storage</h4><p>At least 60,000 write queries per second to the storage and obviously Mysql can not handle it. </p>
+<h4 id="3-Messages"><a href="#3-Messages" class="headerlink" title="3. Messages"></a>3. Messages</h4><h3 id="Multiple-Rooms"><a href="#Multiple-Rooms" class="headerlink" title="Multiple Rooms"></a>Multiple Rooms</h3><p>With the growth of users, they would have many other requirements. One of them will be Multiple Room, after all we can not have all of users intermixed in one room.</p>
 <p>Then, it is necessary to allow users to establish and enter different rooms as they wish.</p>
 
       
@@ -661,7 +665,7 @@ Socket: socket.io
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scenerio"><span class="nav-number">2.</span> <span class="nav-text">Scenerio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Architecture"><span class="nav-number">3.</span> <span class="nav-text">Architecture</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Technique"><span class="nav-number">4.</span> <span class="nav-text">Technique</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extensibility"><span class="nav-number">5.</span> <span class="nav-text">Extensibility</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Growth-of-Users"><span class="nav-number">5.1.</span> <span class="nav-text">Growth of Users</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Connections"><span class="nav-number">5.2.</span> <span class="nav-text">1. Connections</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Storage"><span class="nav-number">5.3.</span> <span class="nav-text">2. Storage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Messages"><span class="nav-number">5.4.</span> <span class="nav-text">3. Messages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiple-Rooms"><span class="nav-number">5.5.</span> <span class="nav-text">Multiple Rooms</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scenerio"><span class="nav-number">2.</span> <span class="nav-text">Scenerio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Architecture"><span class="nav-number">3.</span> <span class="nav-text">Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flow-Chart"><span class="nav-number">4.</span> <span class="nav-text">Flow Chart</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Login"><span class="nav-number">4.1.</span> <span class="nav-text">Login</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Regist"><span class="nav-number">4.2.</span> <span class="nav-text">Regist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Post"><span class="nav-number">4.3.</span> <span class="nav-text">Post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Logout"><span class="nav-number">4.4.</span> <span class="nav-text">Logout</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Technique"><span class="nav-number">5.</span> <span class="nav-text">Technique</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Extensibility"><span class="nav-number">6.</span> <span class="nav-text">Extensibility</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Growth-of-Users"><span class="nav-number">6.1.</span> <span class="nav-text">Growth of Users</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Connections"><span class="nav-number">6.1.1.</span> <span class="nav-text">1. Connections</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Storage"><span class="nav-number">6.1.2.</span> <span class="nav-text">2. Storage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Messages"><span class="nav-number">6.1.3.</span> <span class="nav-text">3. Messages</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-Rooms"><span class="nav-number">6.2.</span> <span class="nav-text">Multiple Rooms</span></a></li></ol></li></ol></div>
             
 
           </div>
